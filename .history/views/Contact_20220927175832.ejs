@@ -1,0 +1,55 @@
+<%-include partials/header.ejs%>
+<%-include partials/main_nav.ejs%>
+<link rel='stylesheet' href='/Content/style.css' />
+  
+  <h1><%= title %></h1>
+   <p>Welcome to <%= title %></p>
+<p>Contact us using the following details: <br><b>Phone Number:222-3456-7865. <br>Email:ddf@yahoo.com.</b></p>
+<main>
+<table>
+   <tr>
+       <td>
+           <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+               <div>
+                   <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                   <input type="text" name="fullName" id="fullName">
+               </div>
+               <div>
+                   <label>EMP Code</label>
+                   <input type="text" name="empCode" id="empCode">
+               </div>
+               <div>
+                   <label>Salary</label>
+                   <input type="text" name="salary" id="salary">
+               </div>
+               <div>
+                   <label>City</label>
+                   <input type="text" name="city" id="city">
+               </div>
+               <div  class="form-action-buttons">
+                   <input type="submit" value="Submit">
+               </div>
+           </form>
+       </td>
+       <td>
+           <table class="list" id="employeeList">
+               <thead>
+                   <tr>
+                       <th>Full Name</th>
+                       <th>EMP Code</th>
+                       <th>Salary</th>
+                       <th>City</th>
+                       <th></th>
+                   </tr>
+               </thead>
+               <tbody>
+
+               </tbody>
+           </table>
+       </td>
+   </tr>
+</table>
+</main>
+   <%-include partials/bottom_nav.ejs%>
+<%-include partials/footer.ejs%>   
+

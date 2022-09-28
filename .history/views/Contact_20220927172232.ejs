@@ -1,0 +1,18 @@
+<%-include partials/header.ejs%>
+<%-include partials/main_nav.ejs%>
+  
+
+  
+  <h1><%= title %></h1>
+   <p>Welcome to <%= title %></p>
+<p>Contact us using the following details: <br><b>Phone Number:222-3456-7865. <br>Email:ddf@yahoo.com.</b></p>
+
+form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="name" value="<%= user.name %>" 
+   <%-include partials/bottom_nav.ejs%>
+<%-include partials/footer.ejs%>   
+
