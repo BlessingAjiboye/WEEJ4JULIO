@@ -10,18 +10,18 @@ let mongoose = require('mongoose');
 let db=require('./db');
 //point mongoose to the db URI
 mongoose.connect(db.URI);
-/*let mongoDB = mongoose.connection;
+let mongoDB = mongoose.connection;
 mongoDB.on('error',console.error.bind(console, 'connection Error:'));
-mongoDB.once('oen',()=>{
+mongoDB.once('open',()=>{
   console.log('connected to mongoDB...');
-});*/
+});
 
 
 
-main().catch(err => console.log(err));
+// main().catch(err => console.log(err));
 
-async function main() {
- await mongoose.connect('mongodb://localhost:27017/book_store', {useNewUrlParser:true, useUnifiedTopology: true});
+// async function main() {
+//  await mongoose.connect('mongodb://localhost:27017/book_store', {useNewUrlParser:true, useUnifiedTopology: true});
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 
@@ -57,6 +57,6 @@ app.use(function(err, req, res, next) {
   res.render('error',{title:'Error'});
 });
 
-}
+
 module.exports = app;
 
